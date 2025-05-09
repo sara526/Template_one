@@ -1,5 +1,106 @@
 /*start variables*/
 /*start global rules*/
-.parent {
-    background-color: blueviolet;
+body {
+    font-family: work-sans, sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Small devices*/
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+/*Medium devices*/
+@media (min-width: 992px){
+    .container {
+        width: 950px;
+    }
+}
+/*Large devices*/
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+/*end global rules*/
+/*start header rules*/
+.header {
+    padding: 20px;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    width: 60px;
+}
+.header .links {
+    position: relative;
+}
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+.header .links .icon span {
+    margin-bottom: 5px;
+    height: 2px;
+    background-color: #333;
+}
+.header .links .icon span:first-child {
+    width:100%;
+}
+.header .links .icon span:nth-child(2) {
+    width:60%;
+    transition: var(--main-duration);
+}
+.header .links .icon span:last-child {
+    width: 100%;
+}
+.header .links ul {
+    position: absolute;
+    list-style: none;
+    background-color: #f6f6f6;
+    width:200px;
+    padding: 0;
+    margin: 0;
+    right: 0;  /*Align to the right*/
+    top: calc(100% + 15px); /*below the icon*/
+    display: none;
+}
+/*the above triangle is created */
+.header .links ul::before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    right: 5px;
+    top: -20px; /*above the icon*/
+    border-color: transparent transparent #f6f6f6 transparent
+}
+.header .links:hover ul {
+    display: block; /* to show the menue*/
+}
+.header .links ul li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 15px;
+    transition: var(--main-duration);
+}
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
 }
