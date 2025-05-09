@@ -3,6 +3,7 @@
     --main-color: #10cab7;
     --secondary-color: #2c4755;
 }
+/* End Variables */
 /*start global rules*/
 body {
     font-family: work-sans, sans-serif;
@@ -31,8 +32,32 @@ body {
         width: 1170px;
     }
 }
-/*end global rules*/
-/*start header rules*/
+/*End global rules*/
+/*Start components rules*/
+.special-heading {
+    margin: 0;
+    font-weight: 800;
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    letter-spacing: -3px;
+}
+.special-heading + p {
+    text-align: center;
+    font-size: 17px;
+    margin: -30px 0 0; 
+    color: #797979;
+}
+@media (max-width: 768px) {
+    .special-heading {
+        font-size: 60px;
+    }
+    .special-heading + p {
+        margin-top: -20px;
+    }
+}
+/*End components rules*/
+/*Start header rules*/
 .header {
     padding: 20px;
 }
@@ -137,3 +162,55 @@ body {
 }
 /* end landing section */
 /* start features */
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+.features .container {  /*don't write div before .features */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+.features .feat i {
+    color: var(--main-color);
+}
+.features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0; /* top & bottom 30px */
+}
+.features .feat p {
+    color: #777;
+    line-height: 1.8;
+    font-size: 17px;
+}
+/* End Features */
+/* start services */
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px; /*to move the services section down*/
+.services .services-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+    .services .services-content .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.services .services-content .srv i {
+    flex-basis: 60px;
+    color: var(--main-color);
+}
+}
