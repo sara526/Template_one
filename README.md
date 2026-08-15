@@ -2,6 +2,8 @@
 
 A responsive landing page built with HTML5 and CSS3 as one of my early web development learning projects.
 
+🔗 **[Live Demo](https://sara526.github.io/Template_one/)**
+
 > **Learning Project:** This repository documents an early stage of my learning journey while studying HTML and CSS through Elzero Web School.
 
 ---
