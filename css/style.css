@@ -6,6 +6,7 @@
     --section-background-color: #f6f6f6;
     --section-padding: 60px;
     --section-margin-top: 100px;
+    --main-duration: 0.3s;
 }
 /* End Variables */
 /* start global rules */
@@ -219,7 +220,7 @@ body {
     flex-basis: 60px;
     color: var(--main-color);
 }
-.services .services-content .srv text {
+.services .services-content .srv .text {
     flex: 1;
 }
 .services .services-content .srv .text h3 {
